@@ -11,30 +11,30 @@ export enum SolanaClusterName {
 
 const HELIUS_API_KEY = "2db95077-90ac-433f-a13b-dbe4abcab384";
 
-export const SOLANA_CLUSTERS = {
+export const SONIC_CLUSTERS = {
   [SolanaClusterName.MAINNET]: {
-    name: "Solana Mainnet",
+    name: "Sonic Mainnet",
     endpoint: `https://mainnet.helius-rpc.com/?api-key=${HELIUS_API_KEY}`,
     network: WalletAdapterNetwork.Mainnet,
     explorer: "",
   },
   [SolanaClusterName.TESTNET]: {
-    name: "Solana Testnet",
-    endpoint: "https://testnet.dev2.eclipsenetwork.xyz",
+    name: "Sonic Testnet",
+    endpoint: "https://api.testnet.sonic.game",
     network: WalletAdapterNetwork.Testnet,
     explorer: "https://explorer.dev2.eclipsenetwork.xyz",
   },
   [SolanaClusterName.DEVNET]: {
-    name: "Solana Devnet",
-    endpoint: `https://api.devnet.solana.com`,
+    name: "Sonic Devnet",
+    endpoint: `https://devnet.sonic.game`,
     network: WalletAdapterNetwork.Devnet,
-    explorer: "",
+    explorer: "https://explorer.sonic.game",
   },
 };
 
 export function useSolanaCluster() {
   const [cluster, setCluster] = useState(
-    SOLANA_CLUSTERS[SolanaClusterName.DEVNET]
+    SONIC_CLUSTERS[SolanaClusterName.DEVNET]
   );
 
   const endpoint = useMemo(() => cluster.endpoint, [cluster]);
@@ -42,6 +42,6 @@ export function useSolanaCluster() {
   return {
     cluster,
     endpoint,
-    setCluster: (name: SolanaClusterName) => setCluster(SOLANA_CLUSTERS[name]),
+    setCluster: (name: SolanaClusterName) => setCluster(SONIC_CLUSTERS[name]),
   };
 }

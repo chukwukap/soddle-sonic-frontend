@@ -11,7 +11,7 @@ import {
   SolflareWalletAdapter,
   PhantomWalletAdapter,
 } from "@solana/wallet-adapter-wallets";
-import { useSolanaCluster } from "@/hooks/useSolanaCluster";
+import { useSolanaCluster } from "@/hooks/useSonicCluster";
 
 // Default styles that can be overridden by your app
 require("@solana/wallet-adapter-react-ui/styles.css");

@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useWallet } from "@solana/wallet-adapter-react";
 import { useEffect, useState, useCallback } from "react";
 import { Connection, LAMPORTS_PER_SOL } from "@solana/web3.js";
-import { useSolanaCluster } from "@/hooks/useSolanaCluster";
+import { useSolanaCluster } from "@/hooks/useSonicCluster";
 import { useWalletModal } from "@solana/wallet-adapter-react-ui";
 import Link from "next/link";
 
